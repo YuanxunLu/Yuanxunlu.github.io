@@ -1,0 +1,244 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+	<title>This is my paper title</title>
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Creative and Descriptive Paper Title." />
+	<meta property="og:description" content="Paper description." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
+
+<body>
+	<br>
+	<center>
+	  <span style="font-size:30px">Live Speech Portraits: Real-Time Photorealistic Talking-Head Animation <br>
+      </span> <span style="font-size:12px"> <br>
+      </span> <span style="font-size:20px"><em>ACM Transactions on Graphics (<a href="https://sa2021.siggraph.org/en/">SIGGRAPH Asia 2021</a>), Tokyo</em>&nbsp;<br>
+      </span> <span style="font-size:12px"> <br>
+      </span>
+      <table align=center width=300px>
+			<table align=center width=600px>
+				<tr>
+					<td align=center width=100px>
+						<center>
+						  <span style="font-size:20px">Yuanxun Lu<sup>1,2</sup></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+						  <span style="font-size:20px"><a href="https://scholar.google.com/citations?user=OcN1_gwAAAAJ&hl=zh-CN&oi=ao"> Jinxiang Chai</a> <sup>2 </sup></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+						  <span style="font-size:20px"><a href="https://cite.nju.edu.cn/People/Faculty/20190621/i5054.html">Xun Cao</a><sup>1</sup></span>
+						</center>
+					</td>
+				</tr>
+		</table>
+				<td align=center width=100px>
+						<center>
+						  <span style="font-size:20px"><sup>1</sup><a href="https://www.nju.edu.cn/">Nanjing University</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <sup>2</sup><a href="http://www.xmov.ai/">Xmov</a></span>
+						</center>
+					<span style="font-size:12px">  <br> </span>
+				</td>
+		    
+			<table align=center width=250px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:22px"><a href=''>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:22px"><a href='https://github.com/YuanxunLu/LiveSpeechPortraits'>[GitHub]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+</center>
+
+	<span style="font-size:20px">  <br> </span>
+				</td>
+	<center>
+		<table align=center width=1000px>
+			<tr>
+				<td width=260px>
+				  <center>
+					  <h2> <p align="left"> Abstract </p> </h2> <p align="left"> To the best of our knowledge, we first present a live system that generates personalized photorealistic talking-head animation only driven by audio signals at over 30 fps. Our system contains three stages. The first stage is a deep neural network that extracts deep audio features along with a manifold projection to project the features to the target person's speech space. In the second stage, we learn facial dynamics and motions from the projected audio features. The predicted motions include head poses and upper body motions, where the former is generated by an autoregressive probabilistic model which models the head pose distribution of the target person. Upper body motions are deduced from head poses. In the final stage, we generate conditional feature maps from previous predictions and send them with a candidate image set to an image-to-image translation network to synthesize photorealistic renderings. Our method generalizes well to wild audio and successfully synthesizes high-fidelity personalized facial details, e.g., wrinkles, teeth. Our method also allows explicit control of head poses. Extensive qualitative and quantitative evaluations, along with user studies, demonstrate the superiority of our method over state-of-the-art techniques.</p>
+				    <img class="round" style="width:1100px" src="./resources/teaser.jpeg"/>
+				    <img class="round" style="width:1100px" src="./resources/Pipeline.png"/>
+					  <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+					</center>
+				</td>
+			</tr>
+			
+			<tr>
+				<td width=260px>
+					<center>
+					  <h2> <p align="left"> Supplementary Video </p> </h2> <p align="center">
+		<iframe width="864" height="486" src="./resources/[Compressed]SIGGRAPHAsia21-LiveSpeechPortraits.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe> </p> <span style="font-size:20px">  <br> </span>
+					</center>
+				</td>
+				
+			</tr>
+			
+			<tr>
+				<td width=260px>
+					<center>
+					  <h2> <p align="left"> Citation </p> </h2> <p> Comming Soon...</p> 						
+						<p > <span style="font-size:14pt">
+					<a href="./resources/bibtex.txt">[Bibtex]</a> </p>
+				</td>
+					</center>
+				</td>
+				
+			</tr>
+			
+			
+			<tr>
+				<td width=260px>
+					<center>
+					  <h2> <p align="left"> Acknowledgments </p> </h2> <p align="left">We would like to thank Shuaizhen Jing for the help with the Tensorrt implementation. We are grateful to Qingqing Tian for the facial capture. Yuanxun Lu would also like to thank Xinya Ji for her mental support and proof-reading during the project. This work was supported by the NSFC grant 62025108, 61627804 and Leading Technology of Jiangsu Basic Research Plan (BK20192003).</p>
+					</center>
+				</td>
+				
+			</tr>
+			
+		</table>
+	</center>
+	
+
+<br>
+</body>
+</html>
+
