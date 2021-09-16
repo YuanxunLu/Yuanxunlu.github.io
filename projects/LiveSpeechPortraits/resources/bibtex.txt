@@ -1,6 +1,11 @@
-@inproceedings{author20XXtitle,
-  title={Please cite me},
-  author={Author, First and Author, Second and Author, Third},
-  booktitle={Conference},
-  year={20XX}
-}
+@inproceedings{LiveSpeechPortraits_SIGGRAPH_ASIA_2021,
+ author = {Lu, Yuanxun and Chai, Jinxiang and Cao, Xun},
+ title = {{Live Speech Portraits}: Real-Time Photorealistic Talking-Head Animation},
+ journal = {ACM Transactions on Graphics},
+ numpages = {17},
+ volume={40},
+ number={6},
+ month = December,
+ year = {2021},
+ doi={10.1145/3478513.3480484}
+} 
