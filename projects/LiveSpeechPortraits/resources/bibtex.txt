@@ -1,4 +1,4 @@
-@inproceedings{LiveSpeechPortraits_SIGGRAPH_ASIA_2021,
+@article{lu2021live,
  author = {Lu, Yuanxun and Chai, Jinxiang and Cao, Xun},
  title = {{Live Speech Portraits}: Real-Time Photorealistic Talking-Head Animation},
  journal = {ACM Transactions on Graphics},
@@ -9,3 +9,4 @@
  year = {2021},
  doi={10.1145/3478513.3480484}
 } 
+
