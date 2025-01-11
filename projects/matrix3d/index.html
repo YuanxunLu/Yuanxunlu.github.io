@@ -193,7 +193,7 @@ All-in-One</h1>
           <h2 class="title is-3">Pose Estimation</h2>
           <p>
           Predict camera poses of sparse-view images. Colored denotes predictions while black denotes groundtruth poses.</p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+          <video id="pose" autoplay controls muted loop playsinline height="100%">
             <source src="./resources/pose_x264.mp4"
                     type="video/mp4">
           </video>
@@ -207,10 +207,9 @@ All-in-One</h1>
         <div class="columns is-centered">
           <div class="column content">
             <p>
-			  Given arbitary input views, our method is able to synthesize novel views.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
+		    Given any input views, our method is able to synthesize novel views of arbitrary poses.</p>
+            <video id="nvs-video" autoplay controls muted loop playsinline height="100%">
+              <source src="./resources/nvs_x264.mp4"
                       type="video/mp4">
             </video>
           </div>
@@ -285,13 +284,13 @@ All-in-One</h1>
 
         <div class="content has-text-justified">
           <p>
-			Here we present the <strong>unposed sparse-view 3d reconstruction</strong> via Matrix3D. By compositing the tasks above, users could generate several novel views RGBs & Depths observations under certain splined camera trajectories, which could be later sent to a 3DGS reconstruction pipeline for final reconstruction.
+			Finally, we present the <strong>unposed sparse-view 3d reconstruction</strong> via Matrix3D. By compositing the tasks above, users could generate several novel views RGBs & Depths observations under certain splined camera trajectories, which could be later sent to a 3DGS reconstruction pipeline for final reconstruction.
           </p>
-        </div>
-		 <video id="unposed-3dgs" autoplay muted loop playsinline height="100%">
+		  <video id="unposed-3dgs" autoplay muted loop playsinline height="100%">
           <source src="./resources/unposed-3dgs.mp4"
                 type="video/mp4">
       	  </video>
+        </div>
       </div>
     </div>
     <!--/ Concurrent Work. -->
