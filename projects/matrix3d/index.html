@@ -182,52 +182,110 @@ All-in-One</h1>
     </div>
   </div>
 </section>
+	  
+
 
 	  
 <section class="section">
   <div class="container is-max-desktop">
+
+    <!-- Concurrent Work. -->
     <div class="columns is-centered">
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Pose Estimation</h2>
+      <div class="column is-full-width">
+        <h2 class="title is-3"><center>Example: Unposed 3D Reconstruction</center></h2>
+        <div class="content has-text-justified">
           <p>
-          Predict camera poses of sparse-view images. Colored denotes predictions while black denotes groundtruth poses.</p>
-          <video id="pose" autoplay controls muted loop playsinline height="100%">
-            <source src="./resources/pose_x264.mp4"
+			Matrix3D enables hybrid tasks like <strong>unposed sparse-view 3d reconstruction</strong> by compositing several sub-tasks. <br>
+		  Users could generate several novel views RGBs &amp; Depths observations under certain splined camera trajectories, which could be later sent to a 3DGS reconstruction pipeline for final reconstruction. </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+  </div>
+</section>
+	  
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-1">
+          <video poster="" id="1" autoplay controls muted loop playsinline height="200%">
+            <source src="./resources/3dgs1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-2">
+          <video poster="" id="2" autoplay controls muted loop playsinline height="200%">
+            <source src="./resources/3dgs2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-3">
+          <video poster="" id="3" autoplay controls muted loop playsinline height="200%">
+            <source src="./resources/3dgs3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-4">
+          <video poster="" id="4" autoplay controls muted loop playsinline height="200%">
+            <source src="./resources/3dgs4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-5">
+          <video poster="" id="5" autoplay controls muted loop playsinline height="200%">
+            <source src="./resources/3dgs5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-6">
+          <video poster="" id="6" autoplay controls muted loop playsinline height="200%">
+            <source src="./resources/3dgs6.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-7">
+          <video poster="" id="7" autoplay controls muted loop playsinline height="200%">
+            <source src="./resources/3dgs7.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-8">
+          <video poster="" id="8" autoplay controls muted loop playsinline height="200%">
+            <source src="./resources/3dgs8.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-9">
+          <video poster="" id="9" autoplay controls muted loop playsinline height="200%">
+            <source src="./resources/3dgs9.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-10">
+          <video poster="" id="10" autoplay controls muted loop playsinline height="200%">
+            <source src="./resources/3dgs10.mp4"
                     type="video/mp4">
           </video>
         </div>
       </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Novel View Synthesis</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-		    Given any input views, our method is able to synthesize novel views of arbitrary poses.</p>
-            <video id="nvs-video" autoplay controls muted loop playsinline height="100%">
-              <source src="./resources/nvs_x264.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
     </div>
-    <!--/ Matting. -->
+  </div>
+</section>
 
-	  
+<section class="section">
+ <div class="container is-max-desktop">
+  <h2 class="title is-3"><center>
+      Sub-Task Examples
+    </center></h2>
     <!-- Animation. -->
 <div class="columns is-centered">
   <div class="column is-full-width">
     <h2 class="title is-3">Depth Prediction</h2>
     <div class="content has-text-justified">
       <p>
-        Matrix3D enables depth prediction from images and poses. We could unproject the depth predictions into point clouds.
-      </p>
+        Matrix3D enables depth prediction from images and poses. We could unproject the depth predictions into point clouds. <br>
+        Here we show depth prediction results from 3-view posed images. </p>
 
       <!-- Flexbox layout to keep items in one line -->
       <div class="wrapper" style="display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; gap: 10px;">
@@ -274,26 +332,42 @@ All-in-One</h1>
 </div>
 
 
-    <!--/ Animation. -->
+    <!--/ Animation. -->	  
 
-
-    <!-- Concurrent Work. -->
     <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Unposed 3D Reconstruction</h2>
-
-        <div class="content has-text-justified">
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Pose Estimation</h2>
           <p>
-			Finally, we present the <strong>unposed sparse-view 3d reconstruction</strong> via Matrix3D. By compositing the tasks above, users could generate several novel views RGBs & Depths observations under certain splined camera trajectories, which could be later sent to a 3DGS reconstruction pipeline for final reconstruction.
-          </p>
-		  <video id="unposed-3dgs" autoplay muted loop playsinline height="100%">
-          <source src="./resources/unposed-3dgs.mp4"
-                type="video/mp4">
-      	  </video>
+          Predict camera poses of sparse-view images. Colored denotes predictions while black denotes groundtruth poses.</p>
+          <video id="pose" autoplay controls muted loop playsinline height="100%">
+            <source src="./resources/pose_x264.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">Novel View Synthesis</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+		    Given any input views, our method is able to synthesize novel views of arbitrary poses.</p>
+            <video id="nvs-video" autoplay controls muted loop playsinline height="100%">
+              <source src="./resources/nvs_x264.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
+    <!--/ Matting. -->
+
+
 
   </div>
 </section>
